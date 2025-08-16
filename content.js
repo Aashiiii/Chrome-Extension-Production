@@ -1962,13 +1962,13 @@ async function displayJobInfoIndeed() {
     `;
 
 
-    document.getElementById("linkedinTab").addEventListener("click", function () {
-      document.getElementById("footer").style.display = "none";
-    });
-
-    document.getElementById("jobMatchTab").addEventListener("click", function () {
-      document.getElementById("footer").style.display = "flex";
-    });
+//    document.getElementById("linkedinTab").addEventListener("click", function () {
+//      document.getElementById("footer").style.display = "none";
+//    });
+//
+//    document.getElementById("jobMatchTab").addEventListener("click", function () {
+//      document.getElementById("footer").style.display = "flex";
+//    });
 
     document.body.appendChild(container);
 

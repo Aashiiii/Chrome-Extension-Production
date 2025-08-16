@@ -586,7 +586,7 @@ async function displayJobInfoLinkedin() {
             <span style="color: white;">JOB</span><span style="color: white;">GEN.AI</span>
           </h3>
         </div>
-<hr style="border: none; border-top: 2px solid black; margin: 0;">
+
 
         <!-- Close Button (positioned in top-right corner of header) -->
         <button id="closeButton" style="position: absolute; top: 15px; right: 15px; padding: 5px; background-color: #2b6bf5; border: none; border-radius: 5px; z-index: 100000;">
@@ -802,7 +802,7 @@ async function displayJobInfoLinkedin() {
         <p id="summarizingText" style="text-align: center;"></p>
 
         <!-- Footer Section (Fixed) -->
-        <div id="footer" style="position: fixed; bottom: 0; width: 100%; padding: 0 0; background-color: white; border-top: 2px solid black; z-index: 99999; display: flex; align-items: center;">
+        <div id="footer" style="position: fixed; bottom: 0; width: 100%; padding: 0 0; background-color: white; border-top: 2px solid #ddd; z-index: 99999; display: flex; align-items: center;">
           <button id="saveButton" style="padding: 10px 20px; margin: 15px; margin-left: 50px; background-color: #2B6BF5; color: white; border: none; border-radius: 20px; font-weight: bold;">Save</button>
           <button id="reviewButton" style="padding: 10px 20px; margin: 15px; background-color: #f4f4f4; color: black; border: none; border-radius: 20px;">Review</button>
           <button id="applyButton" style="padding: 10px 20px; margin: 15px; background-color: #f4f4f4; color: black; border: none; border-radius: 20px;">Apply</button>
@@ -1813,7 +1813,7 @@ async function displayJobInfoIndeed() {
                   <span style="color: white;">JOB</span><span style="color: white;">GEN.AI</span>
                 </h3>
               </div>
-      <hr style="border: none; border-top: 2px solid black; margin: 0;">
+
 
               <!-- Close Button (positioned in top-right corner of header) -->
               <button id="closeButton" style="position: absolute; top: 15px; right: 15px; padding: 5px; background-color: #2b6bf5; border: none; border-radius: 5px; z-index: 100000;">
@@ -1953,7 +1953,7 @@ async function displayJobInfoIndeed() {
                 </div>
 
         <!-- Footer Section (Fixed) -->
-        <div id="footer" style="position: fixed; bottom: 0; width: 100%; padding: 0 0; background-color: white; border-top: 2px solid black; z-index: 99999; display: flex; align-items: center;">
+        <div id="footer" style="position: fixed; bottom: 0; width: 100%; padding: 0 0; background-color: white; border-top: 2px solid #ddd; z-index: 99999; display: flex; align-items: center;">
           <button id="saveButton" style="padding: 10px 20px; margin: 15px; margin-left: 50px; background-color: #2B6BF5; color: white; border: none; border-radius: 20px;">Save</button>
           <button id="reviewButton" style="padding: 10px 20px; margin: 15px; background-color: #f4f4f4; color: black; border: none; border-radius: 20px;">Review</button>
           <button id="applyButton" style="padding: 10px 20px; margin: 15px; background-color: #f4f4f4; color: black; border: none; border-radius: 20px;">Apply</button>
@@ -2678,7 +2678,6 @@ async function displayJobInfoSeek() {
                   <span style="color: white;">JOB</span><span style="color: white;">GEN.AI</span>
                 </h3>
               </div>
-      <hr style="border: none; border-top: 2px solid black; margin: 0;">
 
               <!-- Close Button (positioned in top-right corner of header) -->
               <button id="closeButton" style="position: absolute; top: 15px; right: 15px; padding: 5px; background-color: #2b6bf5; border: none; border-radius: 5px; z-index: 100000;">
@@ -2833,7 +2832,7 @@ async function displayJobInfoSeek() {
                         </div>
 
         <!-- Footer Section (Fixed) -->
-        <div id="footer" style="position: fixed; bottom: 0; width: 100%; padding: 0 0; background-color: white; border-top: 2px solid black; z-index: 99999; display: flex; align-items: center;">
+        <div id="footer" style="position: fixed; bottom: 0; width: 100%; padding: 0 0; background-color: white; border-top: 2px solid #ddd; z-index: 99999; display: flex; align-items: center;">
           <button id="saveButton" style="padding: 10px 20px; margin: 15px; margin-left: 50px; background-color: #2B6BF5; color: white; border: none; border-radius: 20px;  font-weight: bold;">Save</button>
           <button id="reviewButton" style="padding: 10px 20px; margin: 15px; background-color: #f4f4f4; color: black; border: none; border-radius: 20px;">Review</button>
           <button id="applyButton" style="padding: 10px 20px; margin: 15px; background-color: #f4f4f4; color: black; border: none; border-radius: 20px;">Apply</button>

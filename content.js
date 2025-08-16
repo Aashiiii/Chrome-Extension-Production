@@ -504,7 +504,7 @@ async function displayJobInfoLinkedin() {
   button.style.zIndex = '99999';
   button.style.width = '60px';
   button.style.height = '60px';
-  button.innerHTML = `<img src="chrome-extension://${chrome.runtime.id}/icon48.png" alt="Logo" style="width: 100%; height: 100%;" />`;
+  button.innerHTML = `<img src="chrome-extension://${chrome.runtime.id}/icons/icon48.png" alt="Logo" style="width: 100%; height: 100%;" />`;
 
   let isDragging = false;
 
@@ -568,15 +568,15 @@ async function displayJobInfoLinkedin() {
 
     const jobTitle = jobTitleElement ? jobTitleElement.innerText.trim() : "Loading job title...";
     const companyName = companyElement ? companyElement.innerText.trim() : "";
-    const companyLogoUrl = companyLogoElement ? companyLogoElement.src : "chrome-extension://" + chrome.runtime.id + "/icon48.png";
+    const companyLogoUrl = companyLogoElement ? companyLogoElement.src : "chrome-extension://" + chrome.runtime.id + "/icons/icon48.png";
     // console.log("setting company logo")
     const jobLocation = jobLocationElement ? jobLocationElement.innerText.trim() : "";
 
     container.innerHTML = `
       <div style="display: flex; flex-direction: column; height: 100vh; box-sizing: border-box;">
         <!-- Header Section -->
-        <div style="background-color: black; padding: 15px; display: flex; align-items: center; justify-content: flex-start; width: 100%; box-sizing: border-box; position: sticky; top: 0; height:70px; z-index: 99999;">
-          <img src="chrome-extension://${chrome.runtime.id}/icon48.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;" />
+        <div style="background-color: #2b6bf5; padding: 15px; display: flex; align-items: center; justify-content: flex-start; width: 100%; box-sizing: border-box; position: sticky; top: 0; height:70px; z-index: 99999;">
+          <img src="chrome-extension://${chrome.runtime.id}/icons/icon48.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;" />
           <h3 style="margin: 0; font-size: 26px; font-weight: bold;">
             <span style="color: white;">JOB</span><span style="color: white;">GEN.AI</span>
           </h3>
@@ -584,8 +584,8 @@ async function displayJobInfoLinkedin() {
 <hr style="border: none; border-top: 2px solid black; margin: 0;">
 
         <!-- Close Button (positioned in top-right corner of header) -->
-        <button id="closeButton" style="position: absolute; top: 15px; right: 15px; padding: 5px; background-color: black; border: none; border-radius: 5px; z-index: 100000;">
-          <img src="chrome-extension://${chrome.runtime.id}/cross.png" alt="Close" style="width: 30px; height: 30px;">
+        <button id="closeButton" style="position: absolute; top: 15px; right: 15px; padding: 5px; background-color: #2b6bf5; border: none; border-radius: 5px; z-index: 100000;">
+          <img src="chrome-extension://${chrome.runtime.id}/icons/cross.png" alt="Close" style="width: 30px; height: 30px;">
         </button>
 
 
@@ -1685,7 +1685,7 @@ async function displayJobInfoIndeed() {
   button.style.zIndex = '99999';
   button.style.width = '60px';
   button.style.height = '60px';
-  button.innerHTML = `<img src="chrome-extension://${chrome.runtime.id}/icon48.png" alt="Logo" style="width: 100%; height: 100%;" />`;
+  button.innerHTML = `<img src="chrome-extension://${chrome.runtime.id}/icons/icon48.png" alt="Logo" style="width: 100%; height: 100%;" />`;
 
   let isDragging = false;
 
@@ -1741,8 +1741,8 @@ async function displayJobInfoIndeed() {
     container.innerHTML = `
       <div style="display: flex; flex-direction: column; height: 100vh; box-sizing: border-box;">
               <!-- Header Section -->
-              <div style="background-color: black; padding: 15px; display: flex; align-items: center; justify-content: flex-start; width: 100%; box-sizing: border-box; position: sticky; top: 0; height:70px; z-index: 99999;">
-                <img src="chrome-extension://${chrome.runtime.id}/icon48.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;" />
+              <div style="background-color: #2b6bf5; padding: 15px; display: flex; align-items: center; justify-content: flex-start; width: 100%; box-sizing: border-box; position: sticky; top: 0; height:70px; z-index: 99999;">
+                <img src="chrome-extension://${chrome.runtime.id}/icons/icon48.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;" />
                 <h3 style="margin: 0; font-size: 26px; font-weight: bold;">
                   <span style="color: white;">JOB</span><span style="color: white;">GEN.AI</span>
                 </h3>
@@ -1750,8 +1750,8 @@ async function displayJobInfoIndeed() {
       <hr style="border: none; border-top: 2px solid black; margin: 0;">
 
               <!-- Close Button (positioned in top-right corner of header) -->
-              <button id="closeButton" style="position: absolute; top: 15px; right: 15px; padding: 5px; background-color: black; border: none; border-radius: 5px; z-index: 100000;">
-                <img src="chrome-extension://${chrome.runtime.id}/cross.png" alt="Close" style="width: 30px; height: 30px;">
+              <button id="closeButton" style="position: absolute; top: 15px; right: 15px; padding: 5px; background-color: #2b6bf5; border: none; border-radius: 5px; z-index: 100000;">
+                <img src="chrome-extension://${chrome.runtime.id}/icons/cross.png" alt="Close" style="width: 30px; height: 30px;">
               </button>
 
 
@@ -2549,7 +2549,7 @@ async function displayJobInfoSeek() {
   button.style.zIndex = '99999';
   button.style.width = '60px';
   button.style.height = '60px';
-  button.innerHTML = `<img src="chrome-extension://${chrome.runtime.id}/icon48.png" alt="Logo" style="width: 100%; height: 100%;" />`;
+  button.innerHTML = `<img src="chrome-extension://${chrome.runtime.id}/icons/icon48.png" alt="Logo" style="width: 100%; height: 100%;" />`;
 
   let isDragging = false;
 
@@ -2606,8 +2606,8 @@ async function displayJobInfoSeek() {
     container.innerHTML = `
       <div style="display: flex; flex-direction: column; height: 100vh; box-sizing: border-box;">
               <!-- Header Section -->
-              <div style="background-color: black; padding: 15px; display: flex; align-items: center; justify-content: flex-start; width: 100%; box-sizing: border-box; position: sticky; top: 0; height:70px; z-index: 99999;">
-                <img src="chrome-extension://${chrome.runtime.id}/icon48.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;" />
+              <div style="background-color: #2b6bf5; padding: 15px; display: flex; align-items: center; justify-content: flex-start; width: 100%; box-sizing: border-box; position: sticky; top: 0; height:70px; z-index: 99999;">
+                <img src="chrome-extension://${chrome.runtime.id}/icons/icon48.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;" />
                 <h3 style="margin: 0; font-size: 26px; font-weight: bold;">
                   <span style="color: white;">JOB</span><span style="color: white;">GEN.AI</span>
                 </h3>
@@ -2615,8 +2615,8 @@ async function displayJobInfoSeek() {
       <hr style="border: none; border-top: 2px solid black; margin: 0;">
 
               <!-- Close Button (positioned in top-right corner of header) -->
-              <button id="closeButton" style="position: absolute; top: 15px; right: 15px; padding: 5px; background-color: black; border: none; border-radius: 5px; z-index: 100000;">
-                <img src="chrome-extension://${chrome.runtime.id}/cross.png" alt="Close" style="width: 30px; height: 30px;">
+              <button id="closeButton" style="position: absolute; top: 15px; right: 15px; padding: 5px; background-color: #2b6bf5; border: none; border-radius: 5px; z-index: 100000;">
+                <img src="chrome-extension://${chrome.runtime.id}/icons/cross.png" alt="Close" style="width: 30px; height: 30px;">
               </button>
 
 

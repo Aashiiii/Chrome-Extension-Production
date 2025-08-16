@@ -742,7 +742,7 @@ async function displayJobInfoLinkedin() {
                         <h4 class="section-title" data-target="linkedinHeadline">
                                         Headline  <span class="dropdown-icon" style="color: #2B6BF5;">▼</span>
                                     </h4>
-                                    <ul id="linkedinHeadline" class="content" style="padding-left: 9px;>
+                                    <ul id="linkedinHeadline" class="content" style="padding-left: 9px;">
                                         <li>Analysing about details...</li>
                                     </ul>
 
@@ -2331,7 +2331,7 @@ async function displayJobInfoIndeed() {
               await extractJobDetails();
 
               companyLogoElement = document.querySelector('img[data-testid="jobsearch-JobInfoHeader-logo-overlay-lower"]');
-              companyLogoUrl = companyLogoElement ? companyLogoElement.src : `chrome-extension://${chrome.runtime.id}/empty.png`;
+              companyLogoUrl = companyLogoElement ? companyLogoElement.src : `chrome-extension://${chrome.runtime.id}/icons/icon48.png`;
               companyElement = document.querySelector('[data-testid="inlineHeader-companyName"] a');
               jobLocationElement = document.querySelector('[data-testid="inlineHeader-companyLocation"] div');
               companyName = companyElement ? companyElement.innerText.trim() : "";

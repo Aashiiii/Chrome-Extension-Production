@@ -217,7 +217,7 @@ async function sendlinkedinDetailsToBubble(details) {
       body: JSON.stringify({
         "email": email,
         "description": details,
-        "job_url": jobUrl
+        "profile_url": jobUrl
       })
     });
     const data = await response.json();
@@ -467,7 +467,7 @@ async function displayJobInfoLinkedin() {
     }
 
     .blur-content > *:not(.upgrade-text) {
-      filter: blur(2px);
+      filter: blur(1.5px);
       opacity: 0.6;
       pointer-events: none;
     }
@@ -1090,10 +1090,11 @@ async function displayJobInfoLinkedin() {
             const linkedInSummary = JSON.parse(linkedInDataJson);
             console.log("Parsed LinkedIn Summary:", linkedInSummary);
 
-
+            console.log(linkedInSummary["status"]);
 
             // Check if linkedin_data exists and is a string
-            if (false) {
+            if (linkedInSummary["status"] == "user_profile_match") {
+
                         if (!linkedInSummary["answer"]) {
                             // console.error("linkedin_data key is missing in the response.");
                         } else {

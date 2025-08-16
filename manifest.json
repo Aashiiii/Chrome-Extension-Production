@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "JobGen.AI: One-Click Save, Review, Apply",
+  "version": "1.0",
+  "description": "AI Agent to save, review, and auto apply jobs",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "identity",
+    "identity.email",
+    "debugger",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.linkedin.com/*",
+    "https://au.indeed.com/*",
+    "https://api.openai.com/*",
+    "https://www.jobgen.ai/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*", "https://au.indeed.com/*", "https://www.seek.com.au/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icon48.png", "empty.png", "cross.png", "fonts/Inter-Bold.woff2", "fonts/Inter-Light.woff2", "fonts/Inter-BlackItalic.woff2"],
+      "matches": ["https://www.linkedin.com/*", "https://au.indeed.com/*", "https://www.seek.com.au/*"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

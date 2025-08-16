@@ -742,7 +742,7 @@ async function displayJobInfoLinkedin() {
                         <h4 class="section-title" data-target="linkedinHeadline">
                                         Headline  <span class="dropdown-icon" style="color: #2B6BF5;">▼</span>
                                     </h4>
-                                    <ul id="linkedinHeadline" class="content">
+                                    <ul id="linkedinHeadline" class="content" style="padding-left: 9px;>
                                         <li>Analysing about details...</li>
                                     </ul>
 

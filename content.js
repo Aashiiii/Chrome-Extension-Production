@@ -751,7 +751,7 @@ async function displayJobInfoLinkedin() {
             <h4 class="section-title" data-target="aboutSection">
                             About <span class="dropdown-icon" style="color: #2B6BF5;">▼</span>
                         </h4>
-                        <ul id="aboutSection" class="content">
+                        <ul id="aboutSection" class="content" style="padding-left: 9px;">
                             <li>Analysing about details...</li>
                         </ul>
 
@@ -760,7 +760,7 @@ async function displayJobInfoLinkedin() {
                         <h4 class="section-title" data-target="experienceSection">
                             Experience <span class="dropdown-icon" style="color: #2B6BF5;">▼</span>
                         </h4>
-                        <ul id="experienceSection" class="content">
+                        <ul id="experienceSection" class="content" style="padding-left: 9px;">
                             <li>Analysing experience details...</li>
                         </ul>
 
@@ -769,7 +769,7 @@ async function displayJobInfoLinkedin() {
                                     <h4 class="section-title" data-target="educationSection">
                                         Education <span class="dropdown-icon" style="color: #2B6BF5;">▼</span>
                                     </h4>
-                                    <ul id="educationSection" class="content">
+                                    <ul id="educationSection" class="content" style="padding-left: 9px;">
                                         <li>Analysing education details...</li>
                                     </ul>
 
@@ -778,7 +778,7 @@ async function displayJobInfoLinkedin() {
                                                 <h4 class="section-title" data-target="skillsSection">
                                                     Skills <span class="dropdown-icon" style="color: #2B6BF5;">▼</span>
                                                 </h4>
-                                                <ul id="skillsSection" class="content">
+                                                <ul id="skillsSection" class="content" style="padding-left: 9px;">
                                                     <li>Analysing skills details...</li>
                                                 </ul>
             <hr style="border: 1px solid #ddd; margin: 20px 0;" />
@@ -786,7 +786,7 @@ async function displayJobInfoLinkedin() {
                                                             <h4 class="section-title" data-target="featuredSection">
                                                                 Featured <span class="dropdown-icon" style="color: #2B6BF5;">▼</span>
                                                             </h4>
-                                                            <ul id="featuredSection" class="content">
+                                                            <ul id="featuredSection" class="content" style="padding-left: 9px;">
                                                                 <li>Analysing featured details...</li>
                                                             </ul>
             <hr style="border: 1px solid #ddd; margin: 20px 0;" />
@@ -794,7 +794,7 @@ async function displayJobInfoLinkedin() {
                                                             <h4 class="section-title" data-target="recommendedSection">
                                                                 Recommended <span class="dropdown-icon" style="color: #2B6BF5;">▼</span>
                                                             </h4>
-                                                            <ul id="recommendedSection" class="content">
+                                                            <ul id="recommendedSection" class="content" style="padding-left: 9px;">
                                                                 <li>Analysing recommended details...</li>
                                                             </ul>
         </div>

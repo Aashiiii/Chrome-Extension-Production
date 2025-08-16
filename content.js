@@ -1920,8 +1920,8 @@ async function displayJobInfoIndeed() {
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
               <div style="flex: 1; padding-right: 20px;">
                 <h4 style="color: black; font-weight: bold;">Skills:</h4>
-                <ul id="hardSkills" style="color: black; padding-left: 20px; margin: 0; list-style-type: disc !important; list-style-position: outside !important;">
-                  <li style="display: list-item !important;">Analysing skills...</li>
+                <ul id="hardSkills" style="color: black; padding-left: 20px; margin: 0; list-style: disc outside;">
+                  <li>Analysing skills...</li>
                 </ul>
               </div>
 
@@ -1929,11 +1929,12 @@ async function displayJobInfoIndeed() {
 
               <div style="flex: 1; padding-left: 20px;">
                 <h4 style="color: black; font-weight: bold;">Technical Skills:</h4>
-                <ul id="softSkills" style="color: black; padding-left: 20px; margin: 0; list-style-type: disc !important; list-style-position: outside !important;">
-                  <li style="display: list-item !important;">Analysing skills...</li>
+                <ul id="softSkills" style="color: black; padding-left: 20px; margin: 0; list-style: disc outside;">
+                  <li>Analysing skills...</li>
                 </ul>
               </div>
             </div>
+
 
 
             <hr style="border: 1px solid #ddd; margin: 20px 0;" />

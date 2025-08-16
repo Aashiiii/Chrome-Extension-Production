@@ -553,10 +553,15 @@ async function displayJobInfoLinkedin() {
     let companyElement;
     let companyLogoElement;
 
-    if (currentlink.includes("linkedin.com/job") && currentlink.includes("job")) {
+    if (currentlink.includes("linkedin.com/job") && currentlink.includes("job") && currentlink.includes("collection")) {
         companyElement = document.querySelector('#main > div > div.scaffold-layout__list-detail-inner.scaffold-layout__list-detail-inner--grow > div.scaffold-layout__detail.overflow-x-hidden.jobs-search__job-details > div > div.jobs-search__job-details--container > div > div > div:nth-child(1) > div > div:nth-child(1) > div > div.relative.job-details-jobs-unified-top-card__container--two-pane > div > div.display-flex.align-items-center > div.display-flex.align-items-center.flex-1 > div > a');
         companyLogoElement = document.querySelector("a[data-test-app-aware-link] img");
-    } else {
+
+    } else if (currentlink.includes("linkedin.com/job") && currentlink.includes("job") && currentlink.includes("search")) {
+                   companyElement = document.querySelector('#main > div > div.scaffold-layout__list-detail-inner.scaffold-layout__list-detail-inner--grow > div.scaffold-layout__detail.jobs-semantic-search-detail > div > div.job-view-layout.jobs-details > div:nth-child(1) > div > div:nth-child(1) > div > div.relative.job-details-jobs-unified-top-card__container--two-pane > div > div.display-flex.align-items-center > div.display-flex.align-items-center.flex-1 > div');
+                   companyLogoElement = document.querySelector(".display-flex.align-items-center.flex-1 a[aria-label$=\"logo\"] img");
+
+               } else {
         companyElement = document.querySelector('#profile-content > div > div.scaffold-layout.scaffold-layout--breakpoint-md.scaffold-layout--main-aside.scaffold-layout--reflow.pv-profile.pvs-loader-wrapper__shimmer--animate > div > div > main > section.artdeco-card.GnQuklSZTYJLESwQmsLZcVBXqMjSlZma > div.ph5 > div.mt2.relative > div:nth-child(1) > div.text-body-medium.break-words');
         companyLogoElement = document.querySelector(".profile-photo-edit__edit-btn img");
     }
@@ -807,6 +812,64 @@ async function displayJobInfoLinkedin() {
 
     document.body.appendChild(container);
 
+    // Wait for the page to fully load and the Apply/Save buttons to appear
+    function addJobgenButton() {
+        // LinkedIn job button container
+        const buttonContainer = document.querySelector('.jobs-s-apply, .display-flex');
+
+        if (!buttonContainer) return;
+
+        // Check if Jobgen button already exists
+        if (document.getElementById('jobgen-button')) return;
+
+        // Create Jobgen button
+        const jobgenButton = document.createElement('button');
+        jobgenButton.id = 'jobgen-button';
+
+        // Copy classes from Apply button for exact styling
+        const applyButton = buttonContainer.querySelector('button.jobs-apply-button');
+        if (applyButton) {
+            jobgenButton.className = applyButton.className;
+            jobgenButton.setAttribute('role', 'button');
+            jobgenButton.setAttribute('aria-label', 'Jobgen button');
+        } else {
+            // fallback style if Apply button not found
+            jobgenButton.style.padding = '8px 16px';
+            jobgenButton.style.backgroundColor = '#0a66c2';
+            jobgenButton.style.color = '#fff';
+            jobgenButton.style.border = 'none';
+            jobgenButton.style.borderRadius = '4px';
+            jobgenButton.style.cursor = 'pointer';
+            jobgenButton.style.fontWeight = 'bold';
+        }
+
+        // Add icon if Apply button has one
+        const applyIcon = applyButton?.querySelector('svg');
+        jobgenButton.innerHTML = `
+            ${applyIcon ? applyIcon.outerHTML : ''}
+            <span class="artdeco-button__text">Jobgen</span>
+        `;
+
+        // Click action
+        jobgenButton.addEventListener('click', () => {
+            alert('Jobgen button clicked!');
+            // Place your Jobgen logic here
+        });
+
+        // Insert Jobgen button **after Apply**
+        if (applyButton) {
+            applyButton.parentNode.insertBefore(jobgenButton, applyButton.nextSibling);
+        }
+    }
+
+    // Observe DOM changes (LinkedIn dynamically loads content)
+    const observer = new MutationObserver(addJobgenButton);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Also try to add immediately in case buttons already exist
+    addJobgenButton();
+
+
 
     const stars = document.querySelectorAll('#starRating .star');
 
@@ -929,6 +992,9 @@ async function displayJobInfoLinkedin() {
             } else {
              profileImageElement = document.querySelector("button.pv-top-card-profile-picture__container img");
             }
+
+
+
 
             const headlineCandidates = document.querySelectorAll("#profile-content .text-body-medium.break-words");
 

@@ -2330,7 +2330,7 @@ async function displayJobInfoIndeed() {
               // Execute the function
               await extractJobDetails();
 
-              companyLogoElement = document.querySelector('div[data-testid="simpler-left-logo"] img');
+              companyLogoElement = document.querySelector('img[data-testid="jobsearch-JobInfoHeader-logo-overlay-lower"]');
               companyLogoUrl = companyLogoElement ? companyLogoElement.src : `chrome-extension://${chrome.runtime.id}/empty.png`;
               companyElement = document.querySelector('[data-testid="inlineHeader-companyName"] a');
               jobLocationElement = document.querySelector('[data-testid="inlineHeader-companyLocation"] div');

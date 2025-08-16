@@ -207,6 +207,7 @@ async function sendlinkedinDetailsToBubble(details) {
     console.log("🚀 Sending linkedin details to Bubble.io...");
     const email = await getEmailFromBackground(); // Get email from background.js
     // console.log("📧 User Email:", email);
+    const jobUrl = window.location.href;
 
     const response = await fetch("https://www.jobgen.ai/api/1.1/wf/chrome_linkedin_data", {
       method: "POST",
@@ -215,7 +216,8 @@ async function sendlinkedinDetailsToBubble(details) {
       },
       body: JSON.stringify({
         "email": email,
-        "description": details
+        "description": details,
+        "job_url": jobUrl
       })
     });
     const data = await response.json();
@@ -458,6 +460,44 @@ async function displayJobInfoLinkedin() {
       font-size: 16px;
       font-weight: bold;
       color: black;
+    }
+
+    .blur-content {
+      position: relative;
+    }
+
+    .blur-content > *:not(.upgrade-text) {
+      filter: blur(2px);
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    .upgrade-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.9);
+      color: #2B6BF5;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      pointer-events: none;
+    }
+
+    /* Single upgrade banner */
+    .upgrade-banner {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      color: red;           /* changed color to red */
+      font-weight: bold;
+      padding: 5px;
+      border-radius: 6px;
+      margin: 5px 0;
+      font-size: 14px;
+      position: relative;   /* needed to offset */
+      left: 10px;           /* move 20px to the right */
     }
 
      .section-title {
@@ -1050,7 +1090,10 @@ async function displayJobInfoLinkedin() {
             const linkedInSummary = JSON.parse(linkedInDataJson);
             console.log("Parsed LinkedIn Summary:", linkedInSummary);
 
+
+
             // Check if linkedin_data exists and is a string
+            if (false) {
                         if (!linkedInSummary["answer"]) {
                             // console.error("linkedin_data key is missing in the response.");
                         } else {
@@ -1224,7 +1267,34 @@ async function displayJobInfoLinkedin() {
                            recommendHTML += " " + recommendCount;
                         }
                         document.getElementById("recommendedSection").innerHTML = recommendHTML;
+                        } else {
+                            // Add ONE upgrade banner above Headline first
+                              const firstHeader = document.querySelector("#linkedinContent h4.section-title");
+                              if (firstHeader && !document.querySelector(".upgrade-banner")) {
+                                const banner = document.createElement("div");
+                                banner.classList.add("upgrade-banner");
+                                banner.textContent = "You can use this feature for free on your profile. Please make sure you have updated your linkedin on your JobGen profile. Upgrade to paid version to view other people's profile.";
+                                firstHeader.parentNode.insertBefore(banner, firstHeader);
+                              }
 
+                              // Blur all sections except Summary + Score
+                              const sectionHeaders = document.querySelectorAll("#linkedinContent h4.section-title");
+
+                              sectionHeaders.forEach((header) => {
+                                // Skip the first header (or any section you don't want blurred)
+                                if (header.closest(".upgrade-banner")) return; // avoid blurring the banner
+
+                                const content = header.nextElementSibling; // the <ul>
+
+                                // Wrap header + content in blur container
+                                const wrapper = document.createElement("div");
+                                wrapper.classList.add("blur-content");
+
+                                header.parentNode.insertBefore(wrapper, header);
+                                wrapper.appendChild(header);
+                                if (content) wrapper.appendChild(content);
+                              });
+                        }
                         // console.log("LinkedIn Data Processing Completed.");
                         }
                       });

@@ -1271,12 +1271,40 @@ async function displayJobInfoLinkedin() {
                         } else {
                             // Add ONE upgrade banner above Headline first
                               const firstHeader = document.querySelector("#linkedinContent h4.section-title");
-                              if (firstHeader && !document.querySelector(".upgrade-banner")) {
+/*                              if (firstHeader && !document.querySelector(".upgrade-banner")) {
                                 const banner = document.createElement("div");
                                 banner.classList.add("upgrade-banner");
                                 banner.textContent = "You can use this feature for free on your profile. Please make sure you have updated your linkedin on your JobGen profile. Upgrade to paid version to view other people's profile.";
                                 firstHeader.parentNode.insertBefore(banner, firstHeader);
                               }
+ */
+                                if (firstHeader && !document.querySelector(".upgrade-banner")) {
+                                  const banner = document.createElement("div");
+                                  banner.classList.add("upgrade-banner");
+
+                                  banner.innerHTML = `
+                                    <strong>This feature is free for analyzing your own LinkedIn profile.</strong><br><br>
+                                    ⚠️ We detected a mismatch between your JobGen.AI profile and the LinkedIn profile you're viewing.<br><br>
+                                    👉 <a href="https://jobgen.ai/account" target="_blank" style="color: #0056b3; font-weight: 600; text-decoration: underline;">
+                                      Update your LinkedIn on JobGen.AI
+                                    </a> to get started.<br><br>
+                                    👉 Want to analyze other profiles?
+                                    <a href="https://jobgen.ai/pricing" target="_blank" style="color: #007e33; font-weight: 600; text-decoration: underline;">
+                                      Upgrade
+                                    </a> for full access.
+                                  `;
+
+                                  banner.style.padding = "14px";
+                                  banner.style.backgroundColor = "#e6f0ff"; // soft blue background
+                                  banner.style.border = "1px solid #b3d1ff";
+                                  banner.style.borderRadius = "8px";
+                                  banner.style.fontSize = "14px";
+                                  banner.style.color = "#003366";
+                                  banner.style.marginBottom = "12px";
+                                  banner.style.lineHeight = "1.6";
+
+                                  firstHeader.parentNode.insertBefore(banner, firstHeader);
+                                }
 
                               // Blur all sections except Summary + Score
                               const sectionHeaders = document.querySelectorAll("#linkedinContent h4.section-title");
